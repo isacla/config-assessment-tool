@@ -46,7 +46,7 @@ class Color(Enum):
 def setBackgroundImage(root: Presentation, slide: Slide, image_path: str):
     left = top = Inches(0)
     img_path = image_path
-    pic = slide.shapes.add_picture(img_path, left, top, width=root.slide_width, height=root.slide_height)
+    pic = slide.shapes.add_picture(img_path, left, top, width=Inches(16), height=Inches(9))
 
     # Move it to the background
     slide.shapes._spTree.remove(pic._element)
